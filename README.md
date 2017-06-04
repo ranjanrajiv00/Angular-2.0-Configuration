@@ -1,4 +1,4 @@
-# Angular 2.0 Configuration 
+## Angular 2.0 Configuration 
 npm init -y
 
 echo >> tsconfig.json
