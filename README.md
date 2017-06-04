@@ -62,7 +62,6 @@ npm install typescript --save-dev
 
 **implement app.component.ts**
 <pre>
-// app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -116,7 +115,8 @@ npm install angular2-template-loader awesome-typescript-loader css-loader file-l
 npm install html-webpack-plugin webpack-merge extract-text-webpack-plugin --save-dev
 
 echo >> webpack.config.js
-configure webpack
+
+**configure webpack**
 entry -> add vendor.ts and polyfills.ts under /src folder
 app -> application bundle
 vendor -> library bundle
