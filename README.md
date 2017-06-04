@@ -40,22 +40,39 @@ npm install typescript --save-dev
 `configure tsconfig.json`
 `
 {
+
     "compilerOptions": {
+    
         "rootDir": "src",
+        
         "outDir": "app",
+        
         "target": "es5",
+        
         "module": "commonjs",
+        
         "moduleResolution": "node",
+        
         "sourceMap": true,
+        
         "emitDecoratorMetadata": true,
+        
         "experimentalDecorators": true,
+        
         "lib": [
+        
             "es2015",
+            
             "dom"
+            
         ],
+        
         "noImplicitAny": false,
+        
         "suppressImplicitAnyIndexErrors": false
+        
     }
+    
 }`
 implement app.component.ts, app.module.ts and module.ts
 
