@@ -37,7 +37,7 @@ npm install reflect-metadata --save
 
 npm install typescript --save-dev
 
-configure tsconfig.json
+`configure tsconfig.json`
 
 implement app.component.ts, app.module.ts and module.ts
 
