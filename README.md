@@ -37,7 +37,7 @@ npm install reflect-metadata --save
 
 npm install typescript --save-dev
 
-`configure tsconfig.json`
+**configure tsconfig.json**
 <pre>
 
 {
@@ -59,7 +59,51 @@ npm install typescript --save-dev
     }
 }
 </pre>
-implement app.component.ts, app.module.ts and module.ts
+
+**implement app.component.ts**
+<pre>
+// app.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `
+    {{title}}
+  `
+})
+export class AppComponent {
+  title: string = 'edis'
+}
+</pre>
+
+**app.module.ts**
+<pre>
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+
+@NgModule({
+    imports: [
+        BrowserModule
+    ],
+    declarations: [
+        AppComponent
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule {
+    
+}
+</pre>
+
+**module.ts**
+<pre>
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
+
+// This tells index.html to load AppModule to start the application
+platformBrowserDynamic().bootstrapModule(AppModule);
+</pre>
 
 npm install typings --save-dev
 
