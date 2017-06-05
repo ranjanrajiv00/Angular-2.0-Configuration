@@ -167,6 +167,7 @@ module.exports = {
 </pre>
 
 **add /src/vendor.ts**
+
 <pre>
 // Angular
 import '@angular/platform-browser';
@@ -185,12 +186,14 @@ import '../node_modules/materialize-css/dist/js/materialize.js';
 </pre>
 
 **add /src/polyfills.ts**
+
 <pre>
 import 'core-js'
 import 'zone.js/dist/zone'
 </pre>
 
 **update package.json with**
+
 <pre>
   "scripts": {
     "build": "webpack --progress",
@@ -199,6 +202,7 @@ import 'zone.js/dist/zone'
 </pre>
 
 npm run build
+
 npm start
 
 **Karma & Jasmine Configuration**
@@ -218,7 +222,9 @@ npm install karma-phantomjs-launcher --save-dev
 npm install karma-webpack karma-sourcemap-loader --save-dev
 
 **configure karma.config**
+
 **files settings in karma.config.js**
+
 <pre>
     // list of files / patterns to load in the browser
     files: [
@@ -227,6 +233,7 @@ npm install karma-webpack karma-sourcemap-loader --save-dev
 </pre>
 
 **webpack settings in karma.config.js**
+
 <pre>
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -236,16 +243,18 @@ npm install karma-webpack karma-sourcemap-loader --save-dev
     webpack: require('./webpack.config.js'),
 </pre>
 
-
 npm install @types/jasmine --save-dev
+
 npm install @types/node --save-dev
 
 **add test/main.js**
+
 <pre>
 require('../src/main.spec.ts');
 </pre>
 
 **add /src/main.spec.ts**
+
 <pre>
 import 'core-js'; // ES6 + reflect-metadata
 
@@ -275,6 +284,7 @@ context.keys().map(context);
 </pre>
 
 **add /src/app.component.spec.ts**
+
 <pre>
 import { Component } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
@@ -301,6 +311,7 @@ describe('AppComponent', () => {
 </pre>
 
 **update package.json with below script**
+
 <pre>
 "scripts": {
     "build": "webpack --progress",
