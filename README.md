@@ -217,6 +217,26 @@ npm install karma-phantomjs-launcher --save-dev
 
 npm install karma-webpack karma-sourcemap-loader --save-dev
 
+**configure karma.config**
+**files settings in karma.config.js**
+<pre>
+    // list of files / patterns to load in the browser
+    files: [
+      { pattern: 'test/main.js' }
+    ],
+</pre>
+
+**webpack settings in karma.config.js**
+<pre>
+    // preprocess matching files before serving them to the browser
+    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    preprocessors: {
+      './test/main.js': ['webpack', 'sourcemap']
+    },
+    webpack: require('./webpack.config.js'),
+</pre>
+
+
 npm install @types/jasmine --save-dev
 npm install @types/node --save-dev
 
@@ -278,6 +298,15 @@ describe('AppComponent', () => {
         expect(fixture.componentInstance.title).toBe('edis');
     }));
 });
+</pre>
+
+**update package.json with below script**
+<pre>
+"scripts": {
+    "build": "webpack --progress",
+    "start": "webpack-dev-server --progress",
+    "test": "karma start"
+  },
 </pre>
 
 npm test
