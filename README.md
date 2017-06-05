@@ -166,7 +166,7 @@ module.exports = {
 }
 </pre>
 
-**add /src/vendor.ts"
+**add /src/vendor.ts**
 <pre>
 // Angular
 import '@angular/platform-browser';
@@ -184,7 +184,7 @@ import '../node_modules/materialize-css/dist/js/materialize.js';
 // JS
 </pre>
 
-**add /src/polyfills.ts"
+**add /src/polyfills.ts**
 <pre>
 import 'core-js'
 import 'zone.js/dist/zone'
@@ -254,7 +254,7 @@ const context = (require as any).context('./', true, /\.spec\.ts$/);
 context.keys().map(context);
 </pre>
 
-**add /src/app.component.spec.ts **
+**add /src/app.component.spec.ts**
 <pre>
 import { Component } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
