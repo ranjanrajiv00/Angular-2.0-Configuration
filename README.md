@@ -278,6 +278,6 @@ describe('AppComponent', () => {
         expect(fixture.componentInstance.title).toBe('edis');
     }));
 });
-<pre>
+</pre>
 
 npm test
